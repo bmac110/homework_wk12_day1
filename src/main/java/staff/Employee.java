@@ -1,5 +1,6 @@
 package staff;
 
+
 public abstract class Employee {
 
     private String name;
@@ -37,5 +38,12 @@ public abstract class Employee {
         return bonus;
     }
 
-
+    public String setName(String name) {
+        if(name.trim().isEmpty()) {
+            return "Please enter a name";
+        }
+        else {
+            return this.name = name;
+        }
+    }
 }
